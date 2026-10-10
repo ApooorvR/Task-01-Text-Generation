@@ -3,10 +3,10 @@ from datasets import load_dataset
 
 
 tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
-tokenizer.pad_token = tokenizer.eos_token  # ⭐ FIX
+tokenizer.pad_token = tokenizer.eos_token  
 
 model = GPT2LMHeadModel.from_pretrained("gpt2")
-model.resize_token_embeddings(len(tokenizer))  # ⭐ FIX
+model.resize_token_embeddings(len(tokenizer))  
 
 
 
